@@ -1,24 +1,24 @@
-import requests #install python requests package
+import requests
 import os
-from influxdb_client import InfluxDBClient, Point, WritePrecision #install python influxdb-client package
+from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 # Define the URLs and headers
-url_policy_status = "https://fwb.orked-tech.demo/api/v2.0/policy/policystatus"
-url_system_status = "https://fwb.orked-tech.demo/api/v2.0/system/status.monitor"
+url_policy_status = "https://fwb.orked-tech.demo/api/v2.0/policy/policystatus"  #<-- CHANGE_HERE
+url_system_status = "https://fwb.orked-tech.demo/api/v2.0/system/status.monitor"  #<-- CHANGE_HERE
 headers = {
-    "Authorization": "eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJhZG1pbiIsInZkb20iOiJyb290In0K", #refer to fndn for fortiweb api usage
+    "Authorization": "eyJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJhZG1pbiIsInZkb20iOiJyb290In0K", #<-- CHANGE_HERE
     "Accept": "application/json"
 }
 
 # Define the path to the CA certificate file #place CA cert into the same directory
-ca_cert_path = os.path.join(os.path.dirname(__file__), "myCA.pem")
+ca_cert_path = os.path.join(os.path.dirname(__file__), "myCA.pem") #<-- CHANGE_HERE
 
 # InfluxDB details #install influxdbv2 
-influxdb_url = "http://influxdb.orked-tech.demo:8086"
-token = "4KyZMUTc6VASAISdFhqtmhb8FXfDhhApBnh2wl81SEnULGvmUcmwvXKmxB8ZhGzu1PHHck3VDPH7g7Piv0mR8g=="
-org = "my_api" #home name
-bucket = "fwb_prod" #bucket name
+influxdb_url = "http://influxdb.orked-tech.demo:8086" #<-- CHANGE_HERE
+token = "4KyZMUTc6VASAISdFhqtmhb8FXfDhhApBnh2wl81SEnULGvmUcmwvXKmxB8ZhGzu1PHHck3VDPH7g7Piv0mR8g==" #<-- CHANGE_HERE
+org = "my_api" #<-- CHANGE_HERE
+bucket = "fwb_prod" #<-- CHANGE_HERE
 
 # Initialize InfluxDB client
 client = InfluxDBClient(url=influxdb_url, token=token)
