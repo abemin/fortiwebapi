@@ -63,8 +63,13 @@ web-server-2_connCntPerSec: 0
 
 7. Set cronjob using crontab
    - crontab -e
-   - set below schedule:
-   - * * * * * python3 /path/to/your-script/fwb_to_influx.py >> /dev/null
+   - set below schedule to run every 10 second:
+* * * * * python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
+* * * * * sleep 10; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
+* * * * * sleep 20; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
+* * * * * sleep 30; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
+* * * * * sleep 40; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
+* * * * * sleep 50; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null
 
 8. Add 1.json dashboard to grafana. Edit the query as per your setting.
 
