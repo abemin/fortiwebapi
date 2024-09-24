@@ -66,5 +66,5 @@ web-server-2_connCntPerSec: 0
    - set below schedule:
    - * * * * * python3 /path/to/your-script/fwb_to_influx.py >> /dev/null
 
-8. Add 1.json dashboard to grafana. Edit the policy dashboard as per your setting.
+8. Add 1.json dashboard to grafana. Edit the query as per your setting.
 
