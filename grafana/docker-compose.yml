@@ -1,0 +1,16 @@
+networks: 
+  monitoring: 
+    driver: bridge 
+services: 
+  grafana: 
+    image: grafana/grafana:latest 
+    user: "1000" 
+    container_name: grafana 
+    ports: 
+      - 3000:3000 
+    restart: unless-stopped 
+    volumes: 
+      - ./provisioning/datasources:/etc/grafana/provisioning/datasources 
+      - ./:/var/lib/grafana 
+    networks: 
+      - monitoring 
