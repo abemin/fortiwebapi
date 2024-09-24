@@ -28,7 +28,12 @@ polling resources using fortiweb api and send to influxdb. using grafana for das
    - Take note of the CA certificate.
    - Script is using "myCA.pem". Make sure this file is in the same directory as python script.
    - Set the host file "/etc/hosts". make Linux server can resolve both hostname.
-6. Test the script.
+6. Edit and test the script.
+   - edit the influxdb details.
+   - edit the fortiweb api authorization token.
+     - encode below to base64. can use terminal or online like www.base64encode.org.
+     - {"username":"your_username","password":"your_password","vdom":"root"}
+   - test the script.
    - python3 fwb-to-influx.py
    - expected result would be:
 
