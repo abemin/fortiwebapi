@@ -1,6 +1,6 @@
 import requests #install python requests package
 import os
-from influxdb_client import InfluxDBClient, Point, WritePrecision #install python requests package
+from influxdb_client import InfluxDBClient, Point, WritePrecision #install python influxdb-client package
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 # Define the URLs and headers
