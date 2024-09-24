@@ -17,9 +17,9 @@ Polling resources using fortiweb api and send to influxdb. Using grafana for das
 **3. Install Influxdb & Grafana Docker**
    - use provided docker compose file.
    - take note of the influxdb details:
-     - org: 'my_api'  
-     - bucket: 'fwb_prod'  
-     - token: '4KyZMUTc6VASAISdFhqtmhb8FXfDhhApBnh2wl81SEnULGvmUcmwvXKmxB8ZhGzu1PHHck3VDPH7g7Piv0mR8g==' <-- your token
+     - org: `my_api`  
+     - bucket: `fwb_prod`    
+     - token: `4KyZMUTc6VASAISdFhqtmhb8FXfDhhApBnh2wl81SEnULGvmUcmwvXKmxB8ZhGzu1PHHck3VDPH7g7Piv0mR8g==` **<-- your token**  
    - add influxdb datasource in grafana
 
 **4. Install python3 on Linux Server with modules**
@@ -51,14 +51,14 @@ global_tcp_connection_per_second: 0
 global_throughput_in: 0  
 global_throughput_out: 0  
 global_threat: 0  
-name: web-server <-- this is your policy name  
+name: web-server **<-- this is your policy name**  
 web-server_tcp_concurrent_connection: 25  
 web-server_tcp_connection_per_second: 0  
 web-server_throughput_in: 0  
 web-server_throughput_out: 0  
 web-server_sessionCount: 25  
 web-server_connCntPerSec: 0  
-name: web-server-2 <-- this is your policy 2 name  
+name: web-server-2 **<-- this is your policy 2 name**  
 web-server-2_tcp_concurrent_connection: 0  
 web-server-2_tcp_connection_per_second: 0  
 web-server-2_throughput_in: 0  
