@@ -27,7 +27,7 @@ polling resources using fortiweb api and send to influxdb. using grafana for das
    - Google on how to create self-sign certificate.
    - Take note of the CA certificate.
    - Script is using "myCA.pem". Make sure this file is in the same directory as python script.
-   - Set the host file "/etc/hosts". make Linux server can resolve both hostname.
+   - Set the host file "/etc/hosts". Make sure Linux server can resolve both hostname.
 6. Edit and test the script.
    - edit the influxdb details.
    - edit the fortiweb api authorization token.
