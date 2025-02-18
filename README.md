@@ -79,4 +79,4 @@ web-server-2_connCntPerSec: 0
 \* * * * * sleep 50; python3 /home/administrator/pycsript/fwb_to_influx.py >> /dev/null  
 
 **8. Add 1.json dashboard to grafana. Edit the query as per your setting.**
-
+![alt text](https://github.com/abemin/fortiwebapi/blob/main/SCR-20240924-lkjo.png)?raw=true)
